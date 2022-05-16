@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Welcome to just kart</h3>
+
+
+        {% if user.is_authenticated %}
+        <h3>you have been successfully logged in</h3>
+        <button type="submit"><a href="/signout">Logout</a></button>
+
+        {% else %}
+        <h4>Are you already a member? if not register below</h4>
+        <button type="submit"><a href="/signup">Register</a></button>
+        <button type="submit"><a href="/signin">Login</a></button>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
